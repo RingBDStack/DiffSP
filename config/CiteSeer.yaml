@@ -1,0 +1,33 @@
+seed: 110
+name: CiteSeer
+T_E: 12
+data:
+  batch_size: 44062
+  # val_batch_size: 131072
+train:
+  num_epochs: 5000
+  max_grad_norm: 10
+  val_every_epochs: 5
+  patient_epochs: 5
+gnn_E:
+  hidden_t: 32
+  hidden_X: 32
+  hidden_E: 32
+  num_gnn_layers: 2
+  # num_att_layers: 2
+  dropout: 0.1
+optimizer_E:
+  lr: 0.0005
+  weight_decay: 0
+  amsgrad: true
+lr_scheduler:
+  factor: 0.9
+  patience: 3
+  verbose: true
+purify:
+  t_E: 2
+  k: 8
+  basic_t: 2
+  adaptive_t: 4
+  lamb: 1.0e+3
+

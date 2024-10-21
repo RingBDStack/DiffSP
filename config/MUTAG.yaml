@@ -1,0 +1,44 @@
+seed: 102
+T_E: 9
+name: MUTAG
+attack: prbcd
+data:
+  batch_size: 16384
+  val_batch_size: 131072
+train:
+  num_epochs: 10000
+  max_grad_norm: 10
+  val_every_epochs: 5
+  patient_epochs: 50
+mlp_X:
+  hidden_t: 32
+  hidden_X: 512
+  num_mlp_layers: 2
+  dropout: 0.1
+gnn_E:
+  hidden_t: 32
+  hidden_X: 512
+  hidden_E: 128
+  use_att: false
+  num_layers: 2
+  dropout: 0.1
+optimizer_X:
+  lr: 0.001
+  weight_decay: 0
+  amsgrad: true
+optimizer_E:
+  lr: 0.0003
+  weight_decay: 0
+  amsgrad: true
+lr_scheduler:
+  factor: 0.9
+  patience: 5
+  verbose: true
+purify:
+  k: 4
+  basic_t: 3
+  adaptive_t: 0
+  lamb: 1.0e+1
+
+
+

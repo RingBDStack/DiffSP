@@ -1,0 +1,30 @@
+seed: 110
+name: Photo
+T_E: 9
+data:
+  batch_size: 262144
+train:
+  num_epochs: 5000
+  max_grad_norm: 10
+  val_every_epochs: 5
+  patient_epochs: 10
+gnn_E:
+  hidden_t: 32
+  hidden_X: 32
+  hidden_E: 32
+  num_gnn_layers: 2
+  dropout: 0.1
+optimizer_E:
+  lr: 0.0003
+  weight_decay: 0
+  amsgrad: true
+lr_scheduler:
+  factor: 0.9
+  patience: 3
+  verbose: true
+purify:
+  t_E: 2
+  k: 8
+  basic_t: 4
+  adaptive_t: 2
+  lamb: 1.0e+3
