@@ -10,6 +10,7 @@ def parameter_parser():
     parser.add_argument('--device_id', type=str, default='0', help='device id')
     parser.add_argument('--dataset', type=str, default='Cora', help='dataset')
     parser.add_argument('--attack', type=str, default='prbcd', help='attack')
+    parser.add_argument('--is_train', action='store_true', help='If set, train is True')
 
     args = parser.parse_args()
 

@@ -141,7 +141,8 @@ def main(config):
     classifier = GCN(num_features, 16, num_classes).to(device)
 
     # ====================model==================== #
-    # train_ddpm(config, model, device, x, E_one_hot, ck_path)
+    if config.is_train:
+        train_ddpm(config, model, device, x, E_one_hot, ck_path)
     train_classifier(classifier, x, edge_index, y, idx_train)
 
     # ====================purify==================== #

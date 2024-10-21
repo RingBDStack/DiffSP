@@ -107,7 +107,8 @@ def main(args):
     gcn = GCN(num_features, 16, num_classes).to(device)
 
     ck_path = f'./checkpoint/diffusion/{name}/n_step_E{args.T_E}'
-    # train_ddpm(args, model, train_val_dataset, device, ck_path)
+    if args.is_train:
+        train_ddpm(args, model, train_val_dataset, device, ck_path)
 
     save_gcn_path = f'./checkpoint/classifier/{name}/GCN.pth'
     gcn.load_state_dict(torch.load(save_gcn_path, map_location=device))
