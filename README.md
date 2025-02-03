@@ -14,7 +14,7 @@
 
 To facilitate the reproduction of our experimental results, we provide the adversarial data used in our experiments.
 
-Due to repository space limitations, the data is available through an anonymous account at: https://huggingface.co/datasets/anonymous-random/DiffSP-data/tree/main.
+Due to repository space limitations, the data is available at: [https://huggingface.co/datasets/anonymous-random/DiffSP-data/tree/main](https://huggingface.co/datasets/Mutual/DiffSP-data).
 
 Please download the data and place it in the `./data/` directory before running the experiments.
 
